@@ -131,3 +131,47 @@ services:
       - monitor-net
     labels:
       org.label-schema.group: "monitoring"
+
+  alertmanager-bot:
+    image: metalmatze/alertmanager-bot:0.4.2
+    container_name: alertmanager-bot
+    environment:
+      ALERTMANAGER_URL: http://alertmanager:9093
+      BOLT_PATH: /data/bot.db
+      STORE: bolt
+      TELEGRAM_ADMIN: "749088130"
+      TELEGRAM_TOKEN: 1052369852:AAG6_nUhrSJlmiAsJb8T5ODypVap5D_Ks5g
+      TEMPLATE_PATHS: /templates/default.tmpl
+      HTTP_PROXY: http://proxy.hcm.fpt.vn:80
+      HTTPS_PROXY: http://proxy.hcm.fpt.vn:80
+      NO_PROXY: "alertmanager"
+    ports:
+      - "8081:8080"
+    restart: always
+    volumes:
+      - ./alertmanager-bot/data:/data
+      - ./alertmanager-bot/templates:/templates
+    networks:
+      - monitor-net
+    labels:
+      org.label-schema.group: "monitoring"
+
+  prometheus-msteams:
+    image: quay.io/prometheusmsteams/prometheus-msteams
+    container_name: prometheus-msteam
+    ports:
+      - "2000:2000"
+    volumes:
+      - ./prometheus-msteams/config.yml:/opt/config.yml
+      - ./prometheus-msteams/teams-card.tmpl:/opt/teams-card.tmpl
+    environment:
+      CONFIG_FILE: /opt/config.yml
+      TEMPLATE_FILE: /opt/teams-card.tmpl
+      HTTP_PROXY: http://proxy.hcm.fpt.vn:80
+      HTTPS_PROXY: http://proxy.hcm.fpt.vn:80
+      NO_PROXY: "alertmanager"
+    restart: unless-stopped
+    networks:
+      - monitor-net
+    labels:
+      org.label-schema.group: "monitoring"

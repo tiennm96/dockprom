@@ -1,0 +1,37 @@
+connectors:
+- warning_channel: "https://outlook.office.com/webhook/5ecc6bd9-0db4-4379-9e0d-847506f8a0dd@4ebc9261-871a-44c5-93a5-60eb590917cd/IncomingWebhook/d2e4134ec95e464bbebd75058ba0bbbe/b7c8d8e1-3972-4fec-bad6-7f88b1bf39cc"
+- critial_chanel: "https://outlook.office.com/webhook/5ecc6bd9-0db4-4379-9e0d-847506f8a0dd@4ebc9261-871a-44c5-93a5-60eb590917cd/IncomingWebhook/83932bd5e3b240f88049ce0222c8d96d/b7c8d8e1-3972-4fec-bad6-7f88b1bf39cc"
+
+# - warning_channel: "https://outlook.office.com/webhook/5ecc6bd9-0db4-4379-9e0d-847506f8a0dd@4ebc9261-871a-44c5-93a5-60eb590917cd/IncomingWebhook/f3c35084bc02470cb43d5c852a71b0aa/37ab99a5-6578-4d36-a873-6bca9058ad72"
+#- warning_channel: "https://outlook.office.com/webhook/5ecc6bd9-0db4-4379-9e0d-847506f8a0dd@4ebc9261-871a-44c5-93a5-60eb590917cd/IncomingWebhook/f3c35084bc02470cb43d5c852a71b0aa/37ab99a5-6578-4d36-a873-6bca9058ad72"
+# - information_channel: "https://outlook.office.com/webhook/5ecc6bd9-0db4-4379-9e0d-847506f8a0dd@4ebc9261-871a-44c5-93a5-60eb590917cd/IncomingWebhook/8ba3933ec013430fae640d38cb4db206/37ab99a5-6578-4d36-a873-6bca9058ad72"
+#- hadoop_channel: "https://outlook.office.com/webhook/5ecc6bd9-0db4-4379-9e0d-847506f8a0dd@4ebc9261-871a-44c5-93a5-60eb590917cd/IncomingWebhook/c1f467a86eb44cabbbe4e722d08cc8fc/37ab99a5-6578-4d36-a873-6bca9058ad72"
+# - critical_channel: "https://outlook.office.com/webhook/5ecc6bd9-0db4-4379-9e0d-847506f8a0dd@4ebc9261-871a-44c5-93a5-60eb590917cd/IncomingWebhook/117fa4fde13d45d39f4001d5305ab2a7/37ab99a5-6578-4d36-a873-6bca9058ad72"
+#- critical_channel: "https://outlook.office.com/webhook/5ecc6bd9-0db4-4379-9e0d-847506f8a0dd@4ebc9261-871a-44c5-93a5-60eb590917cd/IncomingWebhook/117fa4fde13d45d39f4001d5305ab2a7/37ab99a5-6578-4d36-a873-6bca9058ad72"
+# - physical_channel: "https://outlook.office.com/webhook/5ecc6bd9-0db4-4379-9e0d-847506f8a0dd@4ebc9261-871a-44c5-93a5-60eb590917cd/IncomingWebhook/85a1d8ff75a64cee830836ead4490a65/37ab99a5-6578-4d36-a873-6bca9058ad72"
+#- physical_channel: "https://outlook.office.com/webhook/5ecc6bd9-0db4-4379-9e0d-847506f8a0dd@4ebc9261-871a-44c5-93a5-60eb590917cd/IncomingWebhook/85a1d8ff75a64cee830836ead4490a65/37ab99a5-6578-4d36-a873-6bca9058ad72"
+#- kvm_channel: "https://outlook.office.com/webhook/5ecc6bd9-0db4-4379-9e0d-847506f8a0dd@4ebc9261-871a-44c5-93a5-60eb590917cd/IncomingWebhook/8ba3933ec013430fae640d38cb4db206/37ab99a5-6578-4d36-a873-6bca9058ad72"
+
+# connectors_with_custom_templates:
+# - request_path: /kvm_channel
+#   template_file: ./default-message-card.tmpl
+#   webhook_url: "https://outlook.office.com/webhook/5ecc6bd9-0db4-4379-9e0d-847506f8a0dd@4ebc9261-871a-44c5-93a5-60eb590917cd/IncomingWebhook/5f581869b3a14999a4e686a8c7d24f5f/37ab99a5-6578-4d36-a873-6bca9058ad72" 
+#   escape_underscores: true
+# - request_path: /warning_channel
+#   template_file: ./test.tmpl
+#   webhook_url: "https://outlook.office.com/webhook/5ecc6bd9-0db4-4379-9e0d-847506f8a0dd@4ebc9261-871a-44c5-93a5-60eb590917cd/IncomingWebhook/d1965c7a63f146eebf16305703d8a039/37ab99a5-6578-4d36-a873-6bca9058ad72"
+#   escape_underscores: true
+# - request_path: /critical_channel
+#   template_file: ./test.tmpl
+#   webhook_url: "https://outlook.office.com/webhook/5ecc6bd9-0db4-4379-9e0d-847506f8a0dd@4ebc9261-871a-44c5-93a5-60eb590917cd/IncomingWebhook/9ffdd497dcd0423a865caf1205de77fd/37ab99a5-6578-4d36-a873-6bca9058ad72"
+#   escape_underscores: true
+# - request_path: /physical_channel
+#   template_file: ./test.tmpl
+#   webhook_url: "https://outlook.office.com/webhook/5ecc6bd9-0db4-4379-9e0d-847506f8a0dd@4ebc9261-871a-44c5-93a5-60eb590917cd/IncomingWebhook/1e13b3a01a66443986fbc0a5ae7a0428/37ab99a5-6578-4d36-a873-6bca9058ad72"
+#   escape_underscores: true
+# - request_path: /hadoop_channel
+#   template_file: ./test.tmpl
+#   webhook_url: "https://outlook.office.com/webhook/5ecc6bd9-0db4-4379-9e0d-847506f8a0dd@4ebc9261-871a-44c5-93a5-60eb590917cd/IncomingWebhook/73175d2ebe1849aa86587939a7e0b8a9/37ab99a5-6578-4d36-a873-6bca9058ad72"
+#   escape_underscores: true
+# -template-file /home/prometheus/prometheusconfig/prometheus_msteam/default-message-card.tmpl \
+
